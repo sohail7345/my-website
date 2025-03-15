@@ -111,3 +111,122 @@ h3 {
     border-radius: 20px;
     font-size: 16px;
 }
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Centering the Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* === 1️⃣ Typing Animation === */
+.typewriter {
+    font-size: 48px;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #333;
+    width: 0;
+    animation: typing 2.5s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #333 }
+}
+
+/* === 2️⃣ Fade-In Animation === */
+.fade-in {
+    font-size: 24px;
+    color: #555;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* === 3️⃣ Zoom-In Animation for Profile Pic === */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transform: scale(0.5);
+    opacity: 0;
+    animation: zoomIn 1.5s ease-in-out forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === 4️⃣ Button Slide-Up Animation === */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    top: 20px;
+    opacity: 0;
+    animation: slideUp 1.2s ease forwards 0.5s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        top: 20px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+/* === 5️⃣ Parallax Scroll Effect === */
+#hero {
+    background-image: url('https://source.unsplash.com/random/1600x900');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
