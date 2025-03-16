@@ -1,232 +1,56 @@
-/* General Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
-}
-
-/* Navbar Styling */
-nav ul {
-    display: flex;
-    justify-content: center;
-    background-color: #4CAF50;
-    padding: 10px;
-}
-
-nav ul li {
-    list-style: none;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* Hero Section Styling */
-#home {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-#home h1 {
-    font-size: 36px;
-    color: #4CAF50;
-}
-
-#home p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background-color: #45a049;
-}
-/* About Section */
-#about {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-}
-
-#about h2 {
-    font-size: 32px;
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-#about p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 24px;
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-.skills-list {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.skills-list li {
-    list-style: none;
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 20px;
-    font-size: 16px;
-}
-/* General Styling */
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Centering the Section */
-#hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+/* Navbar */
+nav {
+    background-color: #4CAF50;
+    padding: 10px;
     text-align: center;
 }
 
-/* === 1️⃣ Typing Animation === */
-.typewriter {
-    font-size: 48px;
-    color: #333;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #333;
-    width: 0;
-    animation: typing 2.5s steps(30, end) forwards, blink 0.7s step-end infinite;
+nav a {
+    color: white;
+    padding: 14px 20px;
+    display: inline-block;
+    text-decoration: none;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+/* Sections */
+section {
+    padding: 50px;
+    text-align: center;
 }
 
-@keyframes blink {
-    from, to { border-color: transparent }
-    50% { border-color: #333 }
+h1, h2, h3 {
+    color: #4CAF50;
 }
 
-/* === 2️⃣ Fade-In Animation === */
-.fade-in {
-    font-size: 24px;
-    color: #555;
-    opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* === 3️⃣ Zoom-In Animation for Profile Pic === */
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    transform: scale(0.5);
-    opacity: 0;
-    animation: zoomIn 1.5s ease-in-out forwards;
-}
-
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* === 4️⃣ Button Slide-Up Animation === */
 .btn {
     background-color: #4CAF50;
     color: white;
-    padding: 12px 24px;
-    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    position: relative;
-    top: 20px;
-    opacity: 0;
-    animation: slideUp 1.2s ease forwards 0.5s;
 }
 
-.btn:hover {
-    background-color: #45a049;
-    transform: scale(1.1);
+/* Gallery */
+.gallery-container img {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 8px;
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        top: 20px;
-    }
-    to {
-        opacity: 1;
-        top: 0;
-    }
-}
-
-/* === 5️⃣ Parallax Scroll Effect === */
-#hero {
-    background-image: url('https://source.unsplash.com/random/1600x900');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+/* Contact */
+input, textarea, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
 }
